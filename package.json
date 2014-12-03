@@ -1,0 +1,24 @@
+{
+  "name": "pat-masonry",
+  "version": "0.0.1",
+  "title": "Patternslib plugin for Masonry",
+  "repository": "https://github.com/Patternslib/pat-masonry.git",
+  "licences": [
+    {
+      "type": "BSD",
+      "URL": "LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "bower": "latest",
+    "requirejs": ""
+  },
+  "homepage": "https://gitub.com/Patternslib/pat-masonry",
+  "maintainers": [
+    {
+      "name": "JC Brand",
+      "email": "jc@opkode.com",
+      "url": "https://www.opkode.com"
+    }
+  ]
+}
