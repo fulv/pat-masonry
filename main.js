@@ -3,6 +3,7 @@ require.config({
     paths: {
         "doc-ready":            "bower_components/doc-ready",
         "eventEmitter":         "bower_components/eventEmitter",
+        "imagesloaded":         "bower_components/imagesloaded/imagesloaded",
         "eventie":              "bower_components/eventie",
         "get-size":             "bower_components/get-size",
         "get-style-property":   "bower_components/get-style-property",

@@ -8,14 +8,15 @@
         define([
             "pat-registry",
             "pat-parser",
-            "masonry"
+            "masonry",
+            "imagesloaded"
             ], function() {
                 return factory.apply(this, arguments);
             });
     } else {
-        factory(root.patterns, root.patterns.Parser, root.Masonry);
+        factory(root.patterns, root.patterns.Parser, root.Masonry, root.imagesLoaded);
     }
-}(this, function(registry, Parser, Masonry) {
+}(this, function(registry, Parser, Masonry, imagesLoaded) {
     "use strict";
     var parser = new Parser("masonry");
     parser.add_argument("column-width", 240);
@@ -36,18 +37,20 @@
 
         init: function mypattern_init($el, opts) {
             var options = parser.parse($el, opts);
-            var msnry = new Masonry($el[0], {
-                columnWidth:            options.columnWidth,
-                containerStyle:         options.containerStyle,
-                gutter:                 options.gutter,
-                hiddenStyle:            options.hiddenStyle,
-                isFitWidth:             options.isFitWidth,
-                isOriginTOp:            options.isOriginTop,
-                isOriginLeft:           options.isOriginLeft,
-                itemSelector:           options.itemSelector,
-                stamp:                  options.stamp,
-                transitionDuration:     options.transitionDuration,
-                visibleStyle:           options.visibleStyle,
+            imagesLoaded(this, function() {
+                new Masonry($el[0], {
+                    columnWidth:            options.columnWidth,
+                    containerStyle:         options.containerStyle,
+                    gutter:                 options.gutter,
+                    hiddenStyle:            options.hiddenStyle,
+                    isFitWidth:             options.isFitWidth,
+                    isOriginTOp:            options.isOriginTop,
+                    isOriginLeft:           options.isOriginLeft,
+                    itemSelector:           options.itemSelector,
+                    stamp:                  options.stamp,
+                    transitionDuration:     options.transitionDuration,
+                    visibleStyle:           options.visibleStyle,
+                });
             });
         }
     };
