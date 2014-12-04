@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "masonry": "~3.2.1",
-    "patternslib": "~2.0.4",
+    "patternslib": "~2.0.5",
     "imagesloaded": "~3.1.8"
   }
 }
