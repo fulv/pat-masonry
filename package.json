@@ -20,5 +20,8 @@
       "email": "jc@opkode.com",
       "url": "https://www.opkode.com"
     }
-  ]
+  ],
+  "dependencies": {
+    "http-server": "^0.7.3"
+  }
 }
